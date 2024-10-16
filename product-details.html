@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product Details</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .item-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .purchase-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .purchase-link:hover {
+            background-color: #f4a261;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h2>Bammco</h2>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Me</a>
+                <a href="bammco.html">Bammco Products</a> <!-- Link to Bammco page -->
+                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Product Details</h1>
+        <h2 id="product-name">Product Name</h2>
+        <img id="product-image" class="item-image" src="" alt="Product Image">
+        <p id="product-description">This is a detailed description of the product.</p>
+        <a id="purchase-link" class="purchase-link" href="purchase.html">Purchase Now</a>
+    </div>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const productName = urlParams.get('product');
+
+        // Update the product details based on the product name
+        if (productName) {
+            const productData = {
+                Product1: {
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                    description: "Detailed description for Product 1.",
+                    purchaseLink: "purchase.html?product=Product1"
+                },
+                Product2: {
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                    description: "Detailed description for Product 2.",
+                    purchaseLink: "purchase.html?product=Product2"
+                },
+                // Repeat for other products...
+                Product3: {
+                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                    description: "Detailed description for Product 3.",
+                    purchaseLink: "purchase.html?product=Product3"
+                }
+            };
+
+            if (productData[productName]) {
+                document.getElementById("product-name").textContent = productName;
+                document.getElementById("product-image").src = productData[productName].image;
+                document.getElementById("product-description").textContent = productData[productName].description;
+                document.getElementById("purchase-link").href = productData[productName].purchaseLink;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
