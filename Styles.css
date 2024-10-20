@@ -1,0 +1,110 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6; /* Improved line height for readability */
+    background-color: #f4f4f4; /* Light gray background for all pages */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure full height of the viewport */
+}
+
+/* Header Styles */
+header {
+    background-color: #333; /* Dark header background */
+    color: white; /* White text in the header */
+    padding: 15px 0; /* Padding for the header */
+    text-align: center; /* Centered header text */
+}
+
+/* Navigation Styles */
+nav {
+    max-width: 1200px; /* Max width for navigation */
+    margin: auto; /* Centered navigation */
+    display: flex; /* Flexbox layout for the navigation */
+    justify-content: space-between; /* Space between menu items */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Padding for the navigation */
+}
+
+nav a {
+    color: white; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 0 15px; /* Padding on left and right */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: #f4a261; /* Change color on hover */
+}
+
+/* Container Styles for Content */
+.container {
+    max-width: 800px; /* Maximum width for content */
+    margin: 20px auto; /* Centered horizontally with margin on top and bottom */
+    padding: 20px; /* Padding inside the container */
+    background-color: white; /* White background for content areas */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    flex: 1; /* Allow container to grow and fill available space */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center; /* Centered footer text */
+    padding: 20px; /* Padding for the footer */
+    background-color: #333; /* Dark footer background */
+    color: white; /* White text in the footer */
+    margin-top: 20px; /* Space above the footer */
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px; /* Space between form groups */
+}
+
+.form-group label {
+    display: block; /* Labels on new lines */
+    font-weight: bold; /* Bold labels */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+.form-group input,
+.form-group select {
+    width: 100%; /* Full width for inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ddd; /* Light border for inputs */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.form-group button {
+    width: 100%; /* Full width for buttons */
+    padding: 10px; /* Padding inside buttons */
+    background-color: #333; /* Dark button background */
+    color: white; /* White text on buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.form-group button:hover {
+    background-color: #f4a261; /* Change button color on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Slightly narrower on smaller screens */
+        padding: 15px; /* Less padding on smaller screens */
+    }
+
+    nav {
+        flex-direction: column; /* Stack navigation links on smaller screens */
+    }
+
+    nav a {
+        margin-bottom: 10px; /* Space between navigation links */
+    }
+}

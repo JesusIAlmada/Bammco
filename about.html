@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>About - JIA</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            line-height: 1.6;
             background-color: #f4f4f4;
+            display: flex; /* Use flexbox layout */
+            flex-direction: column; /* Stack children vertically */
+            min-height: 100vh; /* Full height of the viewport */
         }
 
         header {
@@ -40,40 +44,25 @@
             color: #f4a261;
         }
 
+        /* Main Content */
         section {
-            padding: 60px;
             max-width: 1200px;
-            margin: auto;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #333;
-        }
-
-        .about-me {
-            background-color: #fff;
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            flex: 1; /* Allow section to grow and fill available space */
         }
 
         footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
+            text-align: center; /* Center text in footer */
+            padding: 20px; /* Add padding around footer */
+            background-color: #333; /* Footer background */
+            color: white; /* Footer text color */
+            width: 100%; /* Full width */
         }
     </style>
 </head>
 
 <body>
-
     <!-- Header and Navigation -->
     <header>
         <nav>
@@ -84,30 +73,27 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact Me</a>
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://github.com/JesusIAlmada" target="_blank">GitHub</a>
             </div>
         </nav>
     </header>
 
     <!-- About Section -->
     <section>
-        <div class="about-me">
-            <h1>About Me</h1>
-            <p>Hello, I'm Jia, but that's just one of my nicknames—it stands for my initials! I'm passionate about technology, design, and building meaningful projects. Whether I'm coding or exploring new design techniques, I enjoy creating things that make life easier, more beautiful, and a bit more fun.</p>
+        <h1>About Me</h1>
+        <p>Hello, I'm Jia, but that's just one of my nicknames—it stands for my initials! I'm passionate about technology, design, and building meaningful projects. Whether I'm coding or exploring new design techniques, I enjoy creating things that make life easier, more beautiful, and a bit more fun.</p>
 
-            <p>I thrive in creative environments and love combining my technical skills with a creative flair. This balance is what drives my approach to graphic design and problem-solving in the tech space. I believe that technology should be functional and visually appealing at the same time.</p>
+        <p>I thrive in creative environments and love combining my technical skills with a creative flair. This balance is what drives my approach to graphic design and problem-solving in the tech space. I believe that technology should be functional and visually appealing at the same time.</p>
 
-            <p>When I’m not busy with my latest project, I’m always learning something new, whether it's a new design tool, a programming language, or exploring the vast possibilities of the tech world. Feel free to connect with me through the links above!</p>
+        <p>When I’m not busy with my latest project, I’m always learning something new, whether it's a new design tool, a programming language, or exploring the vast possibilities of the tech world. Feel free to connect with me through the links above!</p>
 
-            <p>Thanks for visiting my page, and I look forward to sharing my work with you!</p>
-        </div>
+        <p>Thanks for visiting my page, and I look forward to sharing my work with you!</p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>2024 JIA. All rights not reserved  lol.</p>
+        <p>&copy; 2024 JIA. All rights not reserved lol.</p>
     </footer>
-
 </body>
 
 </html>

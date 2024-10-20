@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home - JIA</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            display: flex; /* Use flexbox layout */
+            flex-direction: column; /* Stack children vertically */
+            min-height: 100vh; /* Full height of the viewport */
         }
 
         header {
@@ -46,47 +51,47 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            flex: 1; /* Allow container to grow and fill space */
         }
 
         .product-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             gap: 20px;
             margin-top: 20px;
         }
 
         .product-item {
-            border: 2px solid #fff; /* Border for the product item */
+            border: 2px solid #fff;
             border-radius: 5px;
-            overflow: hidden; /* To clip inner content */
+            overflow: hidden;
             transition: transform 0.3s;
         }
 
         .product-item:hover {
-            transform: scale(1.05); /* Scale effect on hover */
+            transform: scale(1.05);
         }
 
         .item-image {
             width: 100%;
             height: auto;
-            border-bottom: 2px solid #fff; /* Separator between image and text */
+            border-bottom: 2px solid #fff;
         }
 
         .product-description {
             background-color: black;
             color: white;
             padding: 10px;
-            text-align: center; /* Center text */
+            text-align: center;
         }
 
         footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            text-align: center; /* Center text in footer */
+            padding: 20px; /* Add padding around footer */
+            background-color: #333; /* Footer background */
+            color: white; /* Footer text color */
+            position: relative; /* Use relative positioning */
+            width: 100%; /* Full width */
         }
 
         .product-link {
@@ -118,8 +123,8 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact Me</a>
-                <a href="bammco.html">Bammco Products</a> <!-- Link to Bammco page -->
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="bammco.html">Bammco Products</a>
+                <a href="https://github.com/JesusIAlmada" target="_blank">GitHub</a>
             </div>
         </nav>
     </header>
@@ -160,11 +165,9 @@
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 5" class="item-image">
                 <div class="product-description">
                     <p>beta code</p>
-                    <!-- Updated YouTube link starting at 25 seconds -->
                     <a href="https://youtu.be/QHnJ9NmK3Pc?si=uZHg6AksKNcLFGIn&t=49" class="product-link" target="_blank">hype song</a>
                 </div>
             </div>
-            <!-- New Product 6 with YouTube link and consistent alignment -->
             <div class="product-item">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 6" class="item-image">
                 <div class="product-description">
@@ -174,6 +177,8 @@
             </div>
         </section>
     </div>
-</body>
 
-</html>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 JIA. All rights reserved.</p>
+    </footer>

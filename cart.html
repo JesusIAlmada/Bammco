@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Your Cart - Bammco</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+
     <style>
         body {
             margin: 0;
@@ -34,7 +36,8 @@
             border-collapse: collapse;
         }
 
-        th, td {
+        th,
+        td {
             padding: 10px;
             text-align: left;
             border-bottom: 1px solid #ddd;
@@ -51,10 +54,11 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s; /* Smooth transition */
         }
 
         .update-button:hover {
-            background-color: #f4a261;
+            background-color: #f4a261; /* Change background on hover */
         }
 
         .total {
@@ -69,6 +73,17 @@
             background-color: #333;
             color: white;
             margin-top: 20px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            th, td {
+                padding: 8px; /* Smaller padding for smaller screens */
+            }
+
+            .total {
+                font-size: 16px; /* Slightly smaller total font size */
+            }
         }
     </style>
 </head>

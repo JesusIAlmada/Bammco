@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Jia - Contact Me</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             line-height: 1.6;
+            background-color: #f4f4f4; /* Added background color */
         }
 
         header {
@@ -33,16 +36,20 @@
             color: white;
             text-decoration: none;
             padding: 0 15px;
+            transition: color 0.3s; /* Smooth transition for hover */
         }
 
         nav a:hover {
-            color: #f4a261;
+            color: #f4a261; /* Change color on hover */
         }
 
         section {
             padding: 60px;
-            max-width: 1200px;
+            max-width: 800px; /* Limited width for better readability */
             margin: auto;
+            background-color: white; /* Added background color for section */
+            border-radius: 5px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
         }
 
         footer {
@@ -50,6 +57,22 @@
             color: white;
             text-align: center;
             padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column; /* Stack navigation links */
+            }
+
+            section {
+                padding: 40px; /* Reduced padding on smaller screens */
+            }
+
+            nav a {
+                padding: 10px 0; /* Adjusted padding for smaller screens */
+            }
         }
     </style>
 </head>
@@ -66,7 +89,7 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact Me</a>
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://github.com/JesusIAlmada" target="_blank">GitHub</a>
             </div>
         </nav>
     </header>
@@ -79,7 +102,7 @@
 
     <!-- Footer -->
     <footer>
-        <p> 2024 Jia. All rights not reserved.</p>
+        <p>&copy; 2024 Jia. All rights not reserved.</p>
     </footer>
 
 </body>
