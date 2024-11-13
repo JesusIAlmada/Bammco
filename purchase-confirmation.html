@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="purchase.css"> <!-- Link to external CSS -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <style>
+        /* Add your custom styles here */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -127,15 +128,10 @@
             // Trigger confetti animation
             triggerConfetti();
 
-            // Show the success message after 2 seconds
+            // Wait for the animation to finish, then redirect
             setTimeout(function () {
-                alert('Successfully Purchased!');
-            }, 2000); // Show message after 2 seconds
-
-            // Redirect to the homepage after 4 seconds
-            setTimeout(function () {
-                window.location.href = 'index.html'; // Redirect to home page
-            }, 4000); // 4 seconds delay to allow animation and alert to finish
+                window.location.href = 'purchase.html'; // Redirect to purchase page after animation
+            }, 3000); // 3 seconds delay
         });
     </script>
 </body>

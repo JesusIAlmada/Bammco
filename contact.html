@@ -6,75 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Jia - Contact Me</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f4f4; /* Added background color */
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0 15px;
-            transition: color 0.3s; /* Smooth transition for hover */
-        }
-
-        nav a:hover {
-            color: #f4a261; /* Change color on hover */
-        }
-
-        section {
-            padding: 60px;
-            max-width: 800px; /* Limited width for better readability */
-            margin: auto;
-            background-color: white; /* Added background color for section */
-            border-radius: 5px; /* Rounded corners */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 600px) {
-            nav {
-                flex-direction: column; /* Stack navigation links */
-            }
-
-            section {
-                padding: 40px; /* Reduced padding on smaller screens */
-            }
-
-            nav a {
-                padding: 10px 0; /* Adjusted padding for smaller screens */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="contact.css"> <!-- Link to external CSS -->
 </head>
 
 <body>
@@ -97,13 +29,37 @@
     <!-- Contact Section -->
     <section>
         <h1>Contact Me</h1>
-        <p>If you have any questions, feel free to reach out via email at <a href="mailto:jia@jia.com">jia@jia.com</a>.</p>
+        <p>If you have any questions, feel free to reach out via email using this form.</p>
+        
+        <!-- Contact Form -->
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" maxlength="300" required></textarea>
+            
+            <p id="charCount">0/300 characters used</p>
+            
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Success Message Popup -->
+        <div id="popup" class="popup">
+            <p>Your message has been sent!</p>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Jia. All rights not reserved.</p>
     </footer>
+
+    <!-- Link to External JavaScript -->
+    <script src="contact.js"></script>
 
 </body>
 

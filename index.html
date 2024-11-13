@@ -7,108 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Home - JIA</title>
     <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex; /* Use flexbox layout */
-            flex-direction: column; /* Stack children vertically */
-            min-height: 100vh; /* Full height of the viewport */
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0 15px;
-        }
-
-        nav a:hover {
-            color: #f4a261;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            flex: 1; /* Allow container to grow and fill space */
-        }
-
-        .product-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .product-item {
-            border: 2px solid #fff;
-            border-radius: 5px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .product-item:hover {
-            transform: scale(1.05);
-        }
-
-        .item-image {
-            width: 100%;
-            height: auto;
-            border-bottom: 2px solid #fff;
-        }
-
-        .product-description {
-            background-color: black;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-
-        footer {
-            text-align: center; /* Center text in footer */
-            padding: 20px; /* Add padding around footer */
-            background-color: #333; /* Footer background */
-            color: white; /* Footer text color */
-            position: relative; /* Use relative positioning */
-            width: 100%; /* Full width */
-        }
-
-        .product-link {
-            display: block;
-            margin-top: 10px;
-            padding: 10px;
-            background-color: black;
-            color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .product-link:hover {
-            background-color: #f4a261;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -120,13 +20,24 @@
                 <h2>JIA</h2>
             </div>
             <div class="menu">
+                <div id="time-container">
+                    <div id="time-container">
+                        <span id="time-label">Time: </span>
+                        <span id="clock-hours">00</span>:<span id="clock-minutes">00</span>:<span id="clock-seconds">00</span>
+                    </div>
+
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact Me</a>
                 <a href="bammco.html">Bammco Products</a>
                 <a href="https://github.com/JesusIAlmada" target="_blank">GitHub</a>
+
+                <!-- Time Clock -->
+                
+                </div>
             </div>
         </nav>
+        
     </header>
 
     <!-- Main Content -->
@@ -182,3 +93,7 @@
     <footer>
         <p>&copy; 2024 JIA. All rights reserved.</p>
     </footer>
+
+</body>
+
+</html>

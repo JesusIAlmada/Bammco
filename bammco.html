@@ -1,103 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Bammco Products</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0 15px;
-        }
-
-        nav a:hover {
-            color: #f4a261;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .product-container {
-            display: flex; /* Change to flex for side-by-side layout */
-            flex-wrap: wrap; /* Allow items to wrap if there's not enough space */
-            gap: 20px; /* Space between items */
-            justify-content: center; /* Center items */
-            margin-top: 20px;
-        }
-
-        .product-item {
-            border: 2px solid #fff; /* Border for the product item */
-            border-radius: 5px;
-            overflow: hidden; /* To clip inner content */
-            transition: transform 0.3s;
-            background-color: black;
-            color: white;
-            width: 250px; /* Set a fixed width for consistency */
-            text-align: center; /* Center text */
-        }
-
-        .product-item:hover {
-            transform: scale(1.05); /* Scale effect on hover */
-        }
-
-        .item-image {
-            width: 100%;
-            height: auto;
-            border-bottom: 2px solid #fff; /* Separator between image and text */
-        }
-
-        .product-description {
-            padding: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            position: relative; /* Change to relative */
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="bammco.css">
 </head>
 
 <body>
-
-    <!-- Header and Navigation -->
     <header>
         <nav>
             <div class="logo">
@@ -113,75 +24,109 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <div class="container">
+        <div class="sort-container">
+            <label for="sort-select">Sort Products:</label>
+            <select id="sort-select" onchange="sortProducts()">
+                <option value="default">Default</option>
+                <option value="alphabetical">Alphabetical</option>
+                <option value="reverse-alphabetical">Reverse Alphabetical</option>
+                <option value="prev-next">Previous/Next</option> <!-- Added prev/next option -->
+            </select>
+        </div>
+
         <h1>Our Products</h1>
         <p>Explore our amazing range of products!</p>
 
-        <!-- Product Section -->
-        <section class="product-container">
-            <!-- Repeat this block for 12 products -->
-            <a href="product-details.html?product=Product1" class="product-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 1" class="item-image">
-                <div class="product-description">
-                    <p>Product 1</p>
-                </div>
-            </a>
-            <a href="product-details.html?product=Product2" class="product-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 2" class="item-image">
-                <div class="product-description">
-                    <p>Product 2</p>
-                </div>
-            </a>
-            <a href="product-details.html?product=Product3" class="product-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 3" class="item-image">
-                <div class="product-description">
-                    <p>Product 3</p>
-                </div>
-            </a>
-            <a href="product-details.html?product=Product4" class="product-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 4" class="item-image">
-                <div class="product-description">
-                    <p>Product 4</p>
-                </div>
-            </a>
-            <a href="product-details.html?product=Product5" class="product-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 5" class="item-image">
-                <div class="product-description">
-                    <p>Product 5</p>
-                </div>
-            </a>
-            <a href="product-details.html?product=Product6" class="product-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 6" class="item-image">
-                <div class="product-description">
-                    <p>Product 6</p>
-                </div>
-            </a>
-            <a href="product-details.html?product=Product7" class="product-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 7" class="item-image">
-                <div class="product-description">
-                    <p>Product 7</p>
-                </div>
-            </a>
-            <a href="product-details.html?product=Product8" class="product-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 8" class="item-image">
-                <div class="product-description">
-                    <p>Product 8</p>
-                </div>
-            </a>
-            <a href="product-details.html?product=Product9" class="product-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 9" class="item-image">
-                <div class="product-description">
-                    <p>Product 9</p>
-                </div>
-            </a>
-            <a href="product-details.html?product=Product10" class="product-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 10" class="item-image">
-                <div class="product-description">
-                    <p>Product 10</p>
-                </div>
-            </a>
-            <a href="product-details.html?product=Product11" class="product-item">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 11" class="item-image">
-                <div class="product-description">
-                </div>   
+        <section class="product-container" id="product-container">
+            <!-- Example product blocks -->
+            <div class="product" data-name="Product 1">
+                <a href="product-details.html?product=Product1" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 1" class="product-image">
+                    <h2>Product 1</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Product 2">
+                <a href="product-details.html?product=Product2" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 2" class="product-image">
+                    <h2>Product 2</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Product 3">
+                <a href="product-details.html?product=Product3" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 3" class="product-image">
+                    <h2>Product 3</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Product 4">
+                <a href="product-details.html?product=Product4" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 4" class="product-image">
+                    <h2>Product 4</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Product 5">
+                <a href="product-details.html?product=Product5" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 5" class="product-image">
+                    <h2>Product 5</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Product 6">
+                <a href="product-details.html?product=Product6" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 6" class="product-image">
+                    <h2>Product 6</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Product 7">
+                <a href="product-details.html?product=Product7" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 7" class="product-image">
+                    <h2>Product 7</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Product 8">
+                <a href="product-details.html?product=Product8" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 8" class="product-image">
+                    <h2>Product 8</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Product 9">
+                <a href="product-details.html?product=Product9" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 9" class="product-image">
+                    <h2>Product 9</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Product 10">
+                <a href="product-details.html?product=Product10" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 10" class="product-image">
+                    <h2>Product 10</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Product 11">
+                <a href="product-details.html?product=Product11" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 11" class="product-image">
+                    <h2>Product 11</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Product 12">
+                <a href="product-details.html?product=Product12" class="product-link">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 12" class="product-image">
+                    <h2>Product 12</h2>
+                </a>
+            </div>
+            
+            <!-- Add more product blocks as needed -->
+        </section>
+
+        <!-- Pagination buttons for cycling through products -->
+        <div class="pagination">
+            <button id="prev-button" onclick="showPrevProduct()" style="display: none;">Previous</button>
+            <button id="next-button" onclick="showNextProduct()" style="display: none;">Next</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bammco Products. All Rights Reserved.</p>
+    </footer>
+
+    <script src="bammco.js"></script>
+</body>
+</html>

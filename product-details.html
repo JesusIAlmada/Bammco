@@ -1,82 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Product Details</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-
-        .logo h2 {
-            margin: 0;
-        }
-
-        .menu {
-            margin-top: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #f4a261; /* Changes text color on hover */
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .item-image {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-
-        .purchase-link {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-        }
-
-        .purchase-link:hover {
-            background-color: #f4a261; /* Changes background color on hover */
-        }
-    </style>
+    <link rel="stylesheet" href="product-details.css">
 </head>
 
 <body>
 
-    <!-- Header and Navigation -->
     <header>
         <nav>
             <div class="logo">
@@ -86,7 +19,7 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact Me</a>
-                <a href="bammco.html">Bammco Products</a> <!-- Link to Bammco page -->
+                <a href="bammco.html">Bammco Products</a>
                 <a href="https://github.com/JesusIAlmada" target="_blank">GitHub</a>
             </div>
         </nav>
@@ -101,40 +34,38 @@
     </div>
 
     <script>
-        // Get URL parameters
+        // Define product data
+        const productData = {
+            Product1: {
+                name: "Product 1",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "Detailed description for Product 1.",
+                purchaseLink: "purchase.html?product=Product1"
+            },
+            Product2: {
+                name: "Product 2",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "Detailed description for Product 2.",
+                purchaseLink: "purchase.html?product=Product2"
+            },
+            // Repeat similar blocks for other products
+        };
+
+        // Get product name from URL
         const urlParams = new URLSearchParams(window.location.search);
         const productName = urlParams.get('product');
 
-        // Update the product details based on the product name
-        if (productName) {
-            const productData = {
-                Product1: {
-                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
-                    description: "Detailed description for Product 1.",
-                    purchaseLink: "purchase.html?product=Product1"
-                },
-                Product2: {
-                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
-                    description: "Detailed description for Product 2.",
-                    purchaseLink: "purchase.html?product=Product2"
-                },
-                // Repeat for other products...
-                Product3: {
-                    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
-                    description: "Detailed description for Product 3.",
-                    purchaseLink: "purchase.html?product=Product3"
-                }
-            };
-
-            if (productData[productName]) {
-                document.getElementById("product-name").textContent = productName;
-                document.getElementById("product-image").src = productData[productName].image;
-                document.getElementById("product-description").textContent = productData[productName].description;
-                document.getElementById("purchase-link").href = productData[productName].purchaseLink;
-            }
+        // Display product details
+        if (productData[productName]) {
+            const product = productData[productName];
+            document.getElementById("product-name").textContent = product.name;
+            document.getElementById("product-image").src = product.image;
+            document.getElementById("product-description").textContent = product.description;
+            document.getElementById("purchase-link").href = product.purchaseLink;
+        } else {
+            document.getElementById("product-description").textContent = "Product not found.";
         }
     </script>
 
 </body>
-
 </html>
