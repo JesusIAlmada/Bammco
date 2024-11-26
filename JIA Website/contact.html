@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jia - Contact Me</title>
+    <link rel="stylesheet" href="contact.css"> <!-- Link to external CSS -->
+</head>
+
+<body>
+
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo1.png" alt="Logo" style="max-height: 100px;">
+            
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Support</a>
+                <a href="favicon.html">Bammco Information</a>
+                <a href="bammco.html">Bammco Products</a>
+                <a href="https://github.com/JesusIAlmada" target="_blank">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section>
+        <h1>Tech Support</h1>
+        <p>Got questions? Tech troubles? Existential dread? Shoot us an email using this form, and our award-losing support team will get back to you in record time—somewhere between 'eventually' and 'when pigs fly.' Due to our unwavering commitment to mediocrity and a possibly broken inbox, our average response time is about 10 years give or take a decade. But hey, what's the rush? Thanks for your patience—you're gonna need it!</p>
+        
+        <!-- Contact Form -->
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" maxlength="300" required></textarea>
+            
+            <p id="charCount">0/300 characters used</p>
+            
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Success Message Popup -->
+        <div id="popup" class="popup">
+            <p>Your message has been sent! Estimated wait time 10 years.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Jia. All rights not reserved.</p>
+    </footer>
+
+    <!-- Link to External JavaScript -->
+    <script src="contact.js"></script>
+
+</body>
+
+</html>

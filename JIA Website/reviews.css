@@ -1,0 +1,85 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes full height of the viewport */
+}
+
+/* Header styling */
+header {
+    background-color: #000000; /* Adjusted to pure black to match the logo */
+    color: #fff; /* White text color for contrast */
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Navigation styling */
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav .logo h2 {
+    margin: 0;
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+nav .menu a:hover {
+    color: #f4a261;
+}
+
+/* Main section styling */
+section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    flex: 1; /* This ensures the section takes available space */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h1 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+section p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    width: 100%;
+    font-size: 0.9em;
+    margin-top: auto; /* This pushes the footer to the bottom */
+}
+
+footer p {
+    margin: 0;
+}

@@ -1,0 +1,103 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Arrange children vertically */
+    min-height: 100vh; /* Ensure the body takes full height of the viewport */
+}
+
+/* Header styling */
+header {
+    background-color: #000000; /* Adjusted to pure black to match the logo */
+    color: #fff; /* White text color for contrast */
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+nav a:hover {
+    color: #f4a261; /* Change color on hover */
+}
+
+/* Main section styling */
+section {
+    padding: 60px;
+    max-width: 800px;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Ensures this section grows and pushes the footer to the bottom */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+    width: 100%;
+    margin-top: auto; /* Ensures footer is pushed to the bottom */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column; /* Stack navigation links */
+    }
+
+    section {
+        padding: 40px; /* Reduced padding on smaller screens */
+    }
+
+    nav a {
+        padding: 10px 0; /* Adjusted padding for smaller screens */
+    }
+}
+
+/* Popup styling */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+/* For popup fade-in effect */
+.popup.show {
+    display: block;
+    opacity: 1;
+}

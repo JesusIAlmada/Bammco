@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="product-details.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo1.png" alt="Logo" style="max-height: 100px;">
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Support</a>
+                <a href="favicon.html">Bammco Information</a>
+                <a href="bammco.html">Bammco Products</a>
+                <a href="https://github.com/JesusIAlmada" target="_blank">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Product Details</h1>
+        <h2 id="product-name">Tanuki</h2>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl" alt="Product 1" class="product-image" id="product-image">
+        <p id="product-description">This is a detailed description of the product.</p>
+        <a id="purchase-link" class="purchase-link" href="purchase.html">Purchase Now</a>
+    </div>
+
+    <script>
+        // Define product data
+        const productData = {
+            Product1: {
+                name: "Rock Signed by Jesus Christ",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "A divine collectible, perfect for spiritual and geological enthusiasts.",
+                purchaseLink: "purchase.html?product=Product1"
+            },
+            Product2: {
+                name: "Small Rock",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "Compact, portable, and fits in your pocket. Ideal for rock lovers on the go.",
+                purchaseLink: "purchase.html?product=Product2"
+            },
+            Product3: {
+                name: "Large Rock",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "Perfect for display or use as a reliable paperweight.",
+                purchaseLink: "purchase.html?product=Product3"
+            },
+            Product4: {
+                name: "Rock that Looks Like Elvis",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "Thank you, thank you very much. Add this to your collection for a hunk-a-hunk-a burning fun.",
+                purchaseLink: "purchase.html?product=Product4"
+            },
+            Product5: {
+                name: "Pet Rock with Certificate of Adoption",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "Your very own low-maintenance companion. Comes with a heartfelt adoption story.",
+                purchaseLink: "purchase.html?product=Product5"
+            },
+            Product6: {
+                name: "Cursed Rock (Touch at Your Own Risk)",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "A rock with mysterious powers. Not responsible for any hexes or curses.",
+                purchaseLink: "purchase.html?product=Product6"
+            },
+            Product7: {
+                name: "Rock Used in Movie Prop Scene",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "As seen on screen! Own a piece of Hollywood history (allegedly).",
+                purchaseLink: "purchase.html?product=Product7"
+            },
+            Product8: {
+                name: "Perfectly Round Rock",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "A geological marvel with symmetry that would impress mathematicians.",
+                purchaseLink: "purchase.html?product=Product8"
+            },
+            Product9: {
+                name: "Rock with Mysterious Ancient Writing",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "Decipher the secrets of the ancients (or just marvel at the squiggles).",
+                purchaseLink: "purchase.html?product=Product9"
+            },
+            Product10: {
+                name: "Rock That Resembles a Potato",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "Looks like a potato, but definitely a rock. A perfect prank gift.",
+                purchaseLink: "purchase.html?product=Product10"
+            },
+            Product11: {
+                name: "Glow-in-the-Dark Rock",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "Shines bright when the lights go out. A perfect nightlight alternative.",
+                purchaseLink: "purchase.html?product=Product11"
+            },
+            Product12: {
+                name: "Rock Blessed by a Monk",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOsWmNVvwpSsHZc4r8dpXq4D4SAGg_26DNwISES6Z8iT8R9iMl",
+                description: "Anointed with tranquility, this rock brings peace and good vibes.",
+                purchaseLink: "purchase.html?product=Product12"
+            }
+        };
+
+        // Get product name from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productName = urlParams.get('product');
+
+        // Display product details
+        if (productData[productName]) {
+            const product = productData[productName];
+            document.getElementById("product-name").textContent = product.name;
+            document.getElementById("product-image").src = product.image;
+            document.getElementById("product-description").textContent = product.description;
+            document.getElementById("purchase-link").href = product.purchaseLink;
+        } else {
+            document.getElementById("product-description").textContent = "Are You Feeling Lucky?";
+        }
+    </script>
+
+</body>
+</html>

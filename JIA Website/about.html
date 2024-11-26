@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About - JIA</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo1.png" alt="Logo" style="max-height: 100px;">
+            
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Support</a>
+                <a href="favicon.html">Bammco Information</a>
+                <a href="bammco.html">Bammco Products</a>
+                <a href="https://github.com/JesusIAlmada" target="_blank">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Dynamic Greeting and Quote -->
+    <section id="greeting"></section>
+
+    <!-- About Section -->
+    <section>
+        <h1>About Me</h1>
+        <p>Hello, I'm Jia, but that's just one of my nicknames—it stands for my initials!</p>
+        
+        <p>This site is for my final project and consists a mock ecommerce site</p>
+
+        <p>Thanks for visiting my page, and I look forward to sharing my work with you!</p>
+    </section>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 JIA. All rights not reserved lol.</p>
+    </footer>
+
+    <!-- Link to external JavaScript file -->
+    <script src="about.js"></script>
+
+    <!-- Optional Dark Mode CSS (Add in your CSS file) -->
+    <style>
+        /* Position the Dark Mode button to the top right */
+        #darkModeToggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5em;
+            background: none;
+            border: none;
+            color: inherit;
+            cursor: pointer;
+            z-index: 1000; /* Ensure it stays on top */
+        }
+
+        /* Dark Mode Styling */
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-mode a {
+            color: #f4a261;
+        }
+
+        /* Style for the greeting box */
+        #greeting {
+            padding: 20px;
+            background-color: #f4a261;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.5em;
+            color: #fff;
+            max-width: 500px;
+            margin: 20px auto;
+            transition: all 0.3s ease;
+        }
+
+        /* Fade-in effect for greeting */
+        .greeting-message {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</body>
+
+</html>
