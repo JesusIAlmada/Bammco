@@ -2,12 +2,12 @@
 
 // Array of random quotes
 const quotes = [
-    "The only way to do great work is to love what you do. – Steve Jobs",
-    "In the middle of every difficulty lies opportunity. – Albert Einstein",
-    "Your time is limited, so don't waste it living someone else's life. – Steve Jobs",
-    "Believe you can and you're halfway there. – Theodore Roosevelt",
-    "The best time to plant a tree was 20 years ago. The second best time is now. – Chinese Proverb",
-    "It does not matter how slowly you go as long as you do not stop. – Confucius",
+    "To be or not to be that is the question. – Hamlet",
+    "I love inside jokes. I'd love to be a part of one someday. - Michael Scott",
+    "I'm not lazy; I'm just on energy-saving mode. -Jesus Almada",
+    "I’m a multitasking ninja—I can waste time, procrastinate, and be unproductive all at once!- Every College Student",
+    "Some people graduate with honors; I am just honored to graduate.- Jesus Almada",
+    "They say money can’t buy happiness, but it can buy snacks—and that’s basically the same thing.- Jesus Almada",
     "Success is not the key to happiness. Happiness is the key to success. – Albert Schweitzer",
     "I find that the harder I work, the more luck I seem to have. – Thomas Jefferson",
     "Success usually comes to those who are too busy to be looking for it. – Henry David Thoreau",

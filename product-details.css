@@ -6,12 +6,11 @@
         }
 
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #000000; /* Adjusted to pure black to match the logo */
+            color: #fff; /* White text color for contrast */
             padding: 10px 0;
             text-align: center;
         }
-
         .logo h2 {
             margin: 0;
         }
@@ -61,3 +60,13 @@
         .purchase-link:hover {
             background-color: #f4a261; /* Changes background color on hover */
         }
+/* Product Image Styling */
+.product-image {
+    max-width: 100%; /* Ensures the image doesn't exceed the container width */
+    height: auto;    /* Maintains aspect ratio */
+    display: block;  /* Removes inline spacing for images */
+    margin: 20px auto; /* Centers the image */
+    object-fit: contain; /* Ensures the entire image is visible */
+    border-radius: 8px; /* Optional: Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
