@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bammco Products</title>
+    <link rel="stylesheet" href="bammco.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="logo1.png" alt="Logo" style="max-height: 100px;">
+            </div>
+            </div>
+            <div class="menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Support</a>
+                <a href="favicon.html">Bammco Information</a>
+                <a href="bammco.html">Bammco Products</a>
+                <a href="https://github.com/JesusIAlmada" target="_blank">GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="sort-container">
+            <label for="sort-select">Sort Products:</label>
+            <select id="sort-select" onchange="sortProducts()">
+                <option value="default">Default</option>
+                <option value="alphabetical">Alphabetical</option>
+                <option value="reverse-alphabetical">Reverse Alphabetical</option>
+                <option value="prev-next">Previous/Next</option> <!-- Added prev/next option -->
+            </select>
+        </div>
+
+        <h1>Our Products</h1>
+        <p>Explore our amazing range of products!</p>
+
+        <section class="product-container" id="product-container">
+            <!-- Example product blocks -->
+            <div class="product" data-name="Rock Signed by Jesus Christ">
+                <a href="product-details.html?product=Product1" class="product-link">
+                    <img src="https://i.ebayimg.com/images/g/w7EAAOSwsoRimMvq/s-l400.jpg" alt="Rock Signed by Jesus Christ" class="product-image">
+                    <h2>Rock Signed by Jesus Christ</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Small Rock">
+                <a href="product-details.html?product=Product2" class="product-link">
+                    <img src="https://m.media-amazon.com/images/I/61W8BVTF10L.jpg" alt="Small Rock" class="product-image">
+                    <h2>Small Rock</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Large Rock">
+                <a href="product-details.html?product=Product3" class="product-link">
+                    <img src="https://m.media-amazon.com/images/I/71gmO3PTT+L.jpg" alt="Large Rock" class="product-image">
+                    <h2>Large Rock</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Rock that Looks Like Elvis">
+                <a href="product-details.html?product=Product4" class="product-link">
+                    <img src="https://www.thisiscolossal.com/wp-content/uploads/2016/11/rockface-6.jpg" alt="Rock that Looks Like Elvis" class="product-image">
+                    <h2>Rock that Looks Like Elvis</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Pet Rock with Certificate of Adoption">
+                <a href="product-details.html?product=Product5" class="product-link">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTPA14imV29ckybxDK39fk7hiecQ6LFv48wceqs0Ig0J-VhsG0Q-F25kZM1I9HtzCkU_q0YCvLjMsVAVlEit1_qwNNbMecY9qeDtPbAc3s" alt="Pet Rock with Certificate of Adoption" class="product-image">
+                    <h2>Pet Rock with Certificate of Adoption</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Cursed Rock (Touch at Your Own Risk)">
+                <a href="product-details.html?product=Product6" class="product-link">
+                    <img src="https://i.etsystatic.com/38261530/r/il/6a6065/5531847659/il_570xN.5531847659_r9xq.jpg" alt="Cursed Rock (Touch at Your Own Risk)" class="product-image">
+                    <h2>Cursed Rock (Touch at Your Own Risk)</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Rock Used in Movie Prop Scene">
+                <a href="product-details.html?product=Product7" class="product-link">
+                    <img src="https://www.yourprops.com/movieprops/default/4980c350e9746/Saw-III-Pig-Gut-Used-In-Pig-Vat-Scene-1.jpg" alt="Rock Used in Movie Prop Scene" class="product-image">
+                    <h2>Rock Used in Movie Prop Scene</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Perfectly Round Rock">
+                <a href="product-details.html?product=Product8" class="product-link">
+                    <img src="https://i.redd.it/6nfccg8nv9801.jpg" alt="Perfectly Round Rock" class="product-image">
+                    <h2>Perfectly Round Rock</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Rock with Mysterious Ancient Writing">
+                <a href="product-details.html?product=Product9" class="product-link">
+                    <img src="https://i.etsystatic.com/28372608/r/il/968910/3152688213/il_fullxfull.3152688213_88y0.jpg" alt="Rock with Mysterious Ancient Writing" class="product-image">
+                    <h2>Rock with Mysterious Ancient Writing</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Rock That Resembles a Potato">
+                <a href="product-details.html?product=Product10" class="product-link">
+                    <img src="https://i.redd.it/vbk17rl1mhca1.jpg" alt="Rock That Resembles a Potato" class="product-image">
+                    <h2>Rock That Resembles a Potato</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Glow-in-the-Dark Rock">
+                <a href="product-details.html?product=Product11" class="product-link">
+                    <img src="https://cdn.thisiswhyimbroke.com/images/uranium-ore1-640x533.jpg" alt="Glow-in-the-Dark Rock" class="product-image">
+                    <h2>Glow-in-the-Dark Rock</h2>
+                </a>
+            </div>
+            <div class="product" data-name="Rock Blessed by a Monk">
+                <a href="product-details.html?product=Product12" class="product-link">
+                    <img src="https://i.etsystatic.com/5545244/r/il/c41446/3992541002/il_570xN.3992541002_shhn.jpg" alt="Rock Blessed by a Monk" class="product-image">
+                    <h2>Rock Blessed by a Monk</h2>
+                </a>
+            </div>
+            
+            
+            <!-- Add more product blocks as needed -->
+        </section>
+
+        <!-- Pagination buttons for cycling through products -->
+        <div class="pagination">
+            <button id="prev-button" onclick="showPrevProduct()" style="display: none;">Previous</button>
+            <button id="next-button" onclick="showNextProduct()" style="display: none;">Next</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Bammco Products. All Rights Reserved.</p>
+    </footer>
+
+    <script src="bammco.js"></script>
+</body>
+</html>

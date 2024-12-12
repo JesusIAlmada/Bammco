@@ -1,0 +1,130 @@
+/* General Body and Layout */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  /* Ensure the body takes full viewport height */
+}
+
+/* Header and Navigation */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+nav a:hover {
+    color: #f4a261;
+}
+
+/* Time Display in Header */
+#time-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+
+#time-label {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+#clock-hours, #clock-minutes, #clock-seconds {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Main Content Container */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1; /* Allow the content to grow and push the footer down */
+}
+
+/* Product Grid Layout (2 items per row) */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+    justify-items: center;
+}
+
+/* Product Item Styling */
+.product-item {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px; /* Limit width of each product box */
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.item-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-description {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Product Link Button */
+.product-link {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.product-link:hover {
+    background-color: #f4a261;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: white;
+    width: 100%;
+    /* No margin-top, since flex will push the footer down */
+}

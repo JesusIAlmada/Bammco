@@ -1,0 +1,91 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Set the background color to black */
+    color: #fff; /* Set the default text color to white */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('logo1.png') no-repeat center center fixed;
+    background-size: cover; /* Ensure logo covers the entire background */
+    background-position: center center; /* Position the logo in the center */
+}
+
+/* Header styling */
+header {
+    background-color: #000000; /* Adjusted to pure black to match the logo */
+    color: #fff; /* White text color for contrast */
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Navigation styling */
+nav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav .logo h2 {
+    margin: 0;
+}
+
+nav .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+nav .menu a:hover {
+    color: #f4a261;
+}
+
+/* Main section styling */
+section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white for better readability */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Transparent Box Styling */
+.transparent-box {
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparent white */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #333; /* Dark text for contrast */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the transparent box */
+.transparent-box:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Slightly less transparent on hover */
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent footer */
+    color: white;
+    width: 100%;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
